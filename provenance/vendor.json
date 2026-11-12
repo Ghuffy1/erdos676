@@ -75,19 +75,5 @@
     "path": "vendor/PrimeNumberTheoremAnd/IEANTN/Mertens.lean",
     "bytes": 113975,
     "sha256": "6f71a221604463ba1479872012cfb12b885a9e6a8f8abb87a08b4c12c4dca60b"
-  },
-  {
-    "module": "PrimeNumberTheoremAnd.EulerMaclaurin",
-    "url": "https://raw.githubusercontent.com/AlexKontorovich/PrimeNumberTheoremAnd/c39a751132c88b6e8080b74c74023fd95b3d8be0/PrimeNumberTheoremAnd/EulerMaclaurin.lean",
-    "path": "vendor/PrimeNumberTheoremAnd/EulerMaclaurin.lean",
-    "bytes": 3439,
-    "sha256": "a1def4a9f8f0b36864c5d480db137c1d86be3db1a47b67ae151e587a99167146"
-  },
-  {
-    "module": "PrimeNumberTheoremAnd.IEANTN.Mertens",
-    "url": "https://raw.githubusercontent.com/AlexKontorovich/PrimeNumberTheoremAnd/c39a751132c88b6e8080b74c74023fd95b3d8be0/PrimeNumberTheoremAnd/IEANTN/Mertens.lean",
-    "path": "vendor/PrimeNumberTheoremAnd/IEANTN/Mertens.lean",
-    "bytes": 113975,
-    "sha256": "6f71a221604463ba1479872012cfb12b885a9e6a8f8abb87a08b4c12c4dca60b"
   }
 ]

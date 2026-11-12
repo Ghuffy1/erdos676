@@ -58,4 +58,6 @@ The Mertens development and its required LeanArchitect modules are vendored at f
 
 ## Submission status
 
+The selected proof revision `e1e7e9155488dc5d868b5c4cd00e1929f261d7dc` passed a fresh source build, six target and statement-bridge axiom checks, and a fresh bundled-kernel replay. [Verification report](verification/report.md) and [recorded command results](verification/run.json) retain the exact evidence. The report is committed after the checked proof revision.
+
 This repository is a private preparation for the original repository `Ghuffy1/erdos676`. No public release, awards PR, claim, or identity email is implied by this source tree. JSP mathematical review, attribution review, and award decisions remain with the prize maintainers. No first-priority or payment decision is claimed.

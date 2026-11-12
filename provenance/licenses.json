@@ -1,0 +1,14 @@
+[
+  {
+    "path": "vendor/LICENSE-LeanArchitect",
+    "url": "https://raw.githubusercontent.com/hanwenzhu/LeanArchitect/468e8f58fb4ad6e6ad672a08da6d0d0531e95a97/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license": "Apache-2.0"
+  },
+  {
+    "path": "vendor/LICENSE-PrimeNumberTheoremAnd",
+    "url": "https://raw.githubusercontent.com/AlexKontorovich/PrimeNumberTheoremAnd/c39a751132c88b6e8080b74c74023fd95b3d8be0/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "license": "Apache-2.0"
+  }
+]

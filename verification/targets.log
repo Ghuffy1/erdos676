@@ -1,0 +1,273 @@
+⚠ [2435/2457] Replayed Erdos676.NormalizedFactors
+warning: Erdos676/NormalizedFactors.lean:23:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos676/NormalizedFactors.lean:33:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos676/NormalizedFactors.lean:44:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3428/3448] Replayed Erdos676.ResidueFourier
+warning: Erdos676/ResidueFourier.lean:59:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Erdos676/ResidueFourier.lean:67:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3823/3877] Replayed Erdos676.PrimeFrequencySeparation
+warning: Erdos676/PrimeFrequencySeparation.lean:47:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos676/PrimeFrequencySeparation.lean:47:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3824/3877] Replayed Erdos676.FrequencyCount
+warning: Erdos676/FrequencyCount.lean:11:65: Variable name `hD` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hD
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos676/FrequencyCount.lean:57:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3826/3880] Replayed Erdos676.ResidueSieve
+warning: Erdos676/ResidueSieve.lean:113:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3833/3880] Replayed Erdos676.BlockParameters
+warning: Erdos676/BlockParameters.lean:55:15: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3835/3880] Replayed Erdos676.FrequencyDecomposition
+warning: Erdos676/FrequencyDecomposition.lean:62:9: Variable name `k` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _k
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3841/3886] Replayed Erdos676.BoxPaths
+warning: Erdos676/BoxPaths.lean:11:25: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos676/BoxPaths.lean:11:27: Variable name `hj` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hj
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3852/3916] Replayed Erdos676.ResidueBoundaryCounts
+warning: Erdos676/ResidueBoundaryCounts.lean:32:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos676/ResidueBoundaryCounts.lean:32:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos676/ResidueBoundaryCounts.lean:39:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3853/3916] Replayed Erdos676.AvoidanceBoundaryCards
+warning: Erdos676/AvoidanceBoundaryCards.lean:27:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Erdos676/AvoidanceBoundaryCards.lean:55:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3854/3916] Replayed Erdos676.IntervalSums
+warning: Erdos676/IntervalSums.lean:14:35: This simp argument is unused:
+  ha
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hPa, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos676/IntervalSums.lean:14:39: This simp argument is unused:
+  hPa
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ha, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos676/IntervalSums.lean:14:44: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ha, hPa]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3855/3916] Replayed Erdos676.AvoidanceIteration
+warning: Erdos676/AvoidanceIteration.lean:28:66: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hcond, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos676/AvoidanceIteration.lean:28:70: This simp argument is unused:
+  hcond
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hn, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos676/AvoidanceIteration.lean:28:77: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hn, hcond]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3857/3916] Replayed Erdos676.InitialAvoidanceBound
+warning: Erdos676/InitialAvoidanceBound.lean:13:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3881/3947] Replayed Erdos676.HighPrimeBlocks
+warning: Erdos676/HighPrimeBlocks.lean:51:39: Variable name `hτ0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hτ0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3891/3947] Replayed Erdos676.GrowingDyadic
+warning: Erdos676/GrowingDyadic.lean:28:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3894/3947] Replayed Erdos676.PowerFloorLog
+warning: Erdos676/PowerFloorLog.lean:34:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos676/PowerFloorLog.lean:34:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3901/3947] Replayed Erdos676.SingularAverages
+warning: Erdos676/SingularAverages.lean:22:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Erdos676/SingularAverages.lean:23:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Erdos676/SingularAverages.lean:38:21: `if_true` has been deprecated: Use `ite_true` instead
+warning: Erdos676/SingularAverages.lean:41:21: `if_false` has been deprecated: Use `ite_false` instead
+warning: Erdos676/SingularAverages.lean:50:35: `if_false` has been deprecated: Use `ite_false` instead
+⚠ [3913/3947] Replayed Erdos676.FloorMertensRatio
+warning: Erdos676/FloorMertensRatio.lean:42:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos676/FloorMertensRatio.lean:42:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3921/3947] Replayed Erdos676.SingularCoreArithmetic
+warning: Erdos676/SingularCoreArithmetic.lean:34:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ℹ [3922/3947] Replayed Erdos676.FourierPowers
+info: Erdos676/FourierPowers.lean:44:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [3936/3947] Replayed Erdos676.PrimeAvoidSets
+warning: Erdos676/PrimeAvoidSets.lean:94:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Erdos676/PrimeAvoidSets.lean:95:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3937/3947] Replayed Erdos676.HighPrimeFamilies
+warning: Erdos676/HighPrimeFamilies.lean:80:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3942/3947] Replayed Erdos676.StablePrimeAvoidance
+warning: Erdos676/StablePrimeAvoidance.lean:40:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+ℹ [3947/3947] Replayed SubmissionAudit
+info: audit/SubmissionAudit.lean:28:0: Erdos676.erdos676_negative : ¬∀ᶠ (n : ℕ) in atTop, ∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ b < p ∧ n = a * p ^ 2 + b
+info: audit/SubmissionAudit.lean:29:0: Erdos676.erdos676_infinite_exceptions : {n | ¬∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ b < p ∧ n = a * p ^ 2 + b}.Infinite
+info: audit/SubmissionAudit.lean:30:0: Erdos676.full_quantitative_disproof : Erdos676.QuantitativeDisproof
+info: audit/SubmissionAudit.lean:31:0: JSP000549.original_question_negative : ¬JSP000549.OriginalQuestion
+info: audit/SubmissionAudit.lean:32:0: JSP000549.arbitrarily_large_exceptions : ∀ (N : ℕ),
+  ∃ n, N ≤ n ∧ ¬∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ b < p ∧ n = a * p ^ 2 + b
+info: audit/SubmissionAudit.lean:33:0: def JSP000549.OriginalQuestion : Prop :=
+∀ᶠ (n : ℕ) in atTop, ∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ 0 ≤ b ∧ b < p ∧ n = a * p ^ 2 + b
+info: audit/SubmissionAudit.lean:34:0: def Erdos676.Representable : ℕ → Prop :=
+fun n => ∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ b < p ∧ n = a * p ^ 2 + b
+info: audit/SubmissionAudit.lean:35:0: def Erdos676.EventualRepresentation : Prop :=
+∀ᶠ (n : ℕ) in atTop, Erdos676.Representable n
+info: audit/SubmissionAudit.lean:36:0: def Erdos676.QuantitativeDisproof : Prop :=
+∃ c, 0 < c ∧ ∀ᶠ (X : ℕ) in atTop, c * ↑X / Real.log ↑X ≤ ↑(Erdos676.dyadicExceptions X).card
+info: audit/SubmissionAudit.lean:37:0: 'Erdos676.erdos676_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: audit/SubmissionAudit.lean:38:0: 'Erdos676.erdos676_infinite_exceptions' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: audit/SubmissionAudit.lean:39:0: 'Erdos676.full_quantitative_disproof' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: audit/SubmissionAudit.lean:40:0: 'JSP000549.question_equivalent' depends on axioms: [propext, Quot.sound]
+info: audit/SubmissionAudit.lean:41:0: 'JSP000549.original_question_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: audit/SubmissionAudit.lean:42:0: 'JSP000549.arbitrarily_large_exceptions' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3947 jobs).
