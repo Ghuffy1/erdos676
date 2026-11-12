@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper and identify the exact source commit used."
+type: software
+title: "Infinitely many exceptions to a prime-square representation problem of Erdős"
+version: 1.0.0
+authors:
+  - family-names: Howe
+    given-names: Will
+  - family-names: Huffman
+    given-names: Grant
+  - family-names: Kohlmeyer
+    given-names: Jensen
+  - family-names: Kruer
+    given-names: Liam
+license: Apache-2.0
+abstract: "A complete negative answer to the prime-only eventual representation question in Erdős problem 676 and JSP-000549, with an unconditional quantitative lower bound. All four authors receive equal contribution credit."

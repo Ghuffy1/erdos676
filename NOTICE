@@ -1,0 +1,22 @@
+Erdős 676 / JSP-000549 proof project
+Copyright 2026 Will Howe, Grant Huffman, Jensen Kohlmeyer, and Liam Kruer.
+Original project code is distributed under Apache License 2.0.
+The paper and original prose are distributed under CC BY 4.0, as specified in LICENSE-PAPER.
+
+Third-party sources retain their original licenses and notices.
+
+Erdos676/Basic.lean adapts the public Formal Conjectures development,
+Copyright 2026 The Formal Conjectures Authors, Apache License 2.0.
+Source commit e754a78c74a3f2bbc38e4f2063b5f6eed51bde39.
+
+vendor/Architect and vendor/Architect.lean are copied without mathematical changes
+from hanwenzhu/LeanArchitect commit 468e8f58fb4ad6e6ad672a08da6d0d0531e95a97.
+See vendor/LICENSE-LeanArchitect and provenance/vendor.json.
+
+vendor/PrimeNumberTheoremAnd contains the required Mertens development and its
+Euler--Maclaurin dependency from AlexKontorovich/PrimeNumberTheoremAnd commit
+c39a751132c88b6e8080b74c74023fd95b3d8be0.
+See vendor/LICENSE-PrimeNumberTheoremAnd and provenance/vendor.json.
+
+mathlib and its transitive dependencies are fetched at the revisions in
+lake-manifest.json. Their copyright and license notices remain with those projects.

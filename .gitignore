@@ -1,0 +1,12 @@
+.lake/
+.elan/
+build/
+__pycache__/
+*.pyc
+*.log
+*.aux
+*.out
+*.synctex.gz
+.DS_Store
+verification/local*/
+verification/ci/

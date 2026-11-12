@@ -1,0 +1,210 @@
+import Erdos676.Assembly
+import Erdos676.ExactStatement
+import Erdos676.MomentBounds
+import Erdos676.NormalizedFactors
+import Erdos676.Bonferroni
+import Erdos676.MertensInputs
+import Erdos676.Specification
+import Erdos676.ProductBrackets
+import Erdos676.BernoulliModel
+import Erdos676.PeriodicCounts
+import Erdos676.PrimeBands
+import Erdos676.PrimeResidues
+import Erdos676.PrimeLogMoments
+import Erdos676.LocalResidues
+import Erdos676.QuantitativeGluing
+import Erdos676.GramBound
+import Erdos676.SieveNormalization
+import Erdos676.CRTMeans
+import Erdos676.PeriodicSums
+import Erdos676.SelbergSquare
+import Erdos676.TwoShiftSieve
+import Erdos676.DyadicFirstMoment
+import Erdos676.GroupedBonferroni
+import Erdos676.FirstMomentAsymptotic
+import Erdos676.CutoffParameters
+import Erdos676.SecondMomentAsymptotic
+import Erdos676.SingularAverages
+import Erdos676.SingularTail
+import Erdos676.PrimeSquarePeriod
+import Erdos676.ReciprocalTail
+import Erdos676.OriginalSecondMoment
+import Erdos676.MertensPowerRatios
+import Erdos676.PrimeBandSize
+import Erdos676.HighPrimeAveraging
+import Erdos676.InitialLargeAvoidance
+import Erdos676.DyadicRetention
+
+#print axioms Erdos676.representable_iff_mod
+#print axioms Erdos676.not_eventual_iff_unbounded
+#print axioms Erdos676.unbounded_iff_infinite
+#print axioms Erdos676.restricted_mass_lower_bound
+#print axioms Erdos676.positive_restricted_mass_of_moment_gap
+#print axioms Erdos676.sum_overlap
+#print axioms Erdos676.translated_sum_le
+#print axioms Erdos676.smallAverage_mass_le_exceptions
+#print axioms Erdos676.SieveData.exception_exists
+#print axioms Erdos676.disproof_of_eventual_sieve_data
+#print axioms Erdos676.moment_gap_from_bounds
+#print axioms Erdos676.sum_normalizedFactor
+#print axioms Erdos676.alternatingChoose_even_upper
+#print axioms Erdos676.alternatingChoose_odd_lower
+#print axioms Erdos676.exists_linear_quadratic_margin
+#print axioms Erdos676.prime_reciprocal_error
+#print axioms Erdos676.survivalProduct_asymptotic
+#print axioms Erdos676.quantitativeDisproof_implies_disproof
+#print axioms Erdos676.product_lower_bound
+#print axioms Erdos676.weighted_square_tail_bound
+#print axioms Erdos676.periodic_count_scaled_error
+#print axioms Erdos676.prime_power_band_limit
+#print axioms Erdos676.residueCondition_count_period
+#print axioms Erdos676.residueCondition_interval_error
+#print axioms Erdos676.prime_square_condition_count_period
+#print axioms Erdos676.prime_square_interval_scaled_error
+#print axioms Erdos676.truncated_sieve_normalization
+#print axioms Erdos676.bernoulli_first_moment
+#print axioms Erdos676.bernoulli_second_moment
+#print axioms Erdos676.truncated_sieve_second_moment
+#print axioms Erdos676.bernoulli_prime_log_second_moment
+#print axioms Erdos676.prime_sieve_normalizer_tail
+#print axioms Erdos676.twoPositionDensity_formula
+#print axioms Erdos676.normalized_overlap_sum
+#print axioms Erdos676.quantitative_dyadic_count
+#print axioms Erdos676.symmetric_row_sum_bound
+#print axioms Erdos676.inverse_normalizer_bound
+#print axioms Erdos676.crt_product_mean_one
+#print axioms Erdos676.periodic_sum_error
+#print axioms Erdos676.periodic_double_average_upper
+#print axioms Erdos676.crt_double_average_upper
+#print axioms Erdos676.selberg_square_upper_bound
+#print axioms Erdos676.bernoulli_product_expectation
+#print axioms Erdos676.bernoulliBasis_orthogonal
+#print axioms Erdos676.selbergMixture_second_moment
+#print axioms Erdos676.eventBasis_expansion
+#print axioms Erdos676.basisCoefficient_abs_sum_le
+#print axioms Erdos676.bernoulli_event_mean
+#print axioms Erdos676.eventBasis_inner_error
+#print axioms Erdos676.selberg_avoidance_upper_from_counts
+#print axioms Erdos676.square_residue_sieve_upper
+#print axioms Erdos676.selbergNormalizer_log_tail
+#print axioms Erdos676.square_residue_sieve_moment_bound
+#print axioms Erdos676.prime_index_log_moments
+#print axioms Erdos676.prime_square_sieve_upper
+#print axioms Erdos676.two_shift_sieve_upper
+#print axioms Erdos676.event_choose_count
+#print axioms Erdos676.bonferroniEvent_even_upper
+#print axioms Erdos676.bonferroniEvent_odd_lower
+#print axioms Erdos676.bonferroni_model_expectation
+#print axioms Erdos676.bonferroniModel_even_upper
+#print axioms Erdos676.elementary_sum_geometric_bound
+#print axioms Erdos676.survival_product_lower
+#print axioms Erdos676.bonferroniModel_relative_gap
+#print axioms Erdos676.block_degree_budget
+#print axioms Erdos676.grouped_bonferroni_model_lower
+#print axioms Erdos676.truncated_block_weight_bound
+#print axioms Erdos676.disjoint_polynomial_transfer
+#print axioms Erdos676.bounded_block_product_count_error
+#print axioms Erdos676.product_bracket_transfer
+#print axioms Erdos676.grouped_first_moment_lower
+#print axioms Erdos676.prime_block_first_moment_lower
+#print axioms Erdos676.exists_half_power_prime_mass_bound
+#print axioms Erdos676.dyadicPrimeBlocks_cover
+#print axioms Erdos676.dyadicPrimeBlock_mass_le
+#print axioms Erdos676.dyadic_error_product_le
+#print axioms Erdos676.dyadic_first_moment_lower
+#print axioms Erdos676.growing_dyadic_covers
+#print axioms Erdos676.eventually_power_error_absorbed
+#print axioms Erdos676.smallPrimeCount_finite_lower
+#print axioms Erdos676.smallAverage_dyadic_lower
+#print axioms Erdos676.smallAverage_first_moment
+#print axioms Erdos676.exists_discrete_cutoff_parameters
+#print axioms Erdos676.smallPairCount_sieve_bound
+#print axioms Erdos676.smallAverage_second_upper
+#print axioms Erdos676.eventually_power_error_absorbed_by_survival_pow
+#print axioms Erdos676.smallAverage_second_moment_reduction
+#print axioms Erdos676.pairSurvivalProduct_factorization
+#print axioms Erdos676.localSingularExcess_sum_le
+#print axioms Erdos676.crt_pair_average_upper
+#print axioms Erdos676.singular_mixed_average_upper
+#print axioms Erdos676.singular_product_average_upper
+#print axioms Erdos676.singular_tail_increment_upper
+#print axioms Erdos676.second_moment_bound_of_singular_mean
+#print axioms Erdos676.logarithmic_primeSquarePeriod_le
+#print axioms Erdos676.shifted_reciprocal_square_tail
+#print axioms Erdos676.pairMean_sum
+#print axioms Erdos676.singularProductOn_excess_mean
+#print axioms Erdos676.singular_range_mean_bound
+#print axioms Erdos676.singular_range_mean_bound_coarse
+#print axioms Erdos676.singular_three_ranges_mean_bound
+#print axioms Erdos676.singular_cutoff_mean_bound
+#print axioms Erdos676.survival_ratio_limit
+#print axioms Erdos676.exists_survival_ratio_log_bound
+#print axioms Erdos676.singularMajorant_power_band_limit
+#print axioms Erdos676.singularCoreError_tendsto
+#print axioms Erdos676.singular_core_bound
+#print axioms Erdos676.singular_core_average_eventually
+#print axioms Erdos676.log_powerFloor_ratio_tendsto
+#print axioms Erdos676.floor_survival_ratio_limit
+#print axioms Erdos676.growing_singular_average
+#print axioms Erdos676.original_singular_average
+#print axioms Erdos676.original_second_moment
+#print axioms Erdos676.original_second_moment_quadratic
+#print axioms Erdos676.residueFourier_inversion
+#print axioms Erdos676.smallResidues_fourier_norm_le
+#print axioms Erdos676.boxSmooth_character
+#print axioms Erdos676.norm_boxSmooth_character_decay
+#print axioms Erdos676.stdAddChar_sub_one_lower
+#print axioms Erdos676.prime_frequency_separation
+#print axioms Erdos676.complex_gram_row_bound
+#print axioms Erdos676.smoothed_fourier_tail_bound
+#print axioms Erdos676.retained_prime_fourier_mass
+#print axioms Erdos676.sampling_gram_bound
+#print axioms Erdos676.pair_character_sum_decay
+#print axioms Erdos676.integer_square_kernel_sum
+#print axioms Erdos676.separated_square_kernel_sum
+#print axioms Erdos676.real_pair_kernel_bound
+#print axioms Erdos676.separated_pair_sampling_bound
+#print axioms Erdos676.separated_translated_sampling_bound
+#print axioms Erdos676.prime_frequency_sampling_bound
+#print axioms Erdos676.retained_prime_band_energy
+#print axioms Erdos676.smoothed_indicator_decomposition
+#print axioms Erdos676.smoothed_prime_band_energy_size
+#print axioms Erdos676.fourier_error_bound
+#print axioms Erdos676.growing_prime_band_energy
+#print axioms Erdos676.boxSmooth_path_formula
+#print axioms Erdos676.realBoxSmooth_le_of_local
+#print axioms Erdos676.boundaryResidues_card_le
+#print axioms Erdos676.outside_boundary_shift
+#print axioms Erdos676.family_boundary_interval_upper
+#print axioms Erdos676.smoothing_sandwich
+#print axioms Erdos676.avoidance_smoothing_sandwich
+#print axioms Erdos676.sum_deviation_bound
+#print axioms Erdos676.primeBandCount_energy_identity
+#print axioms Erdos676.avoidance_card_bounds
+#print axioms Erdos676.avoidance_boundary_card_bound
+#print axioms Erdos676.avoidance_correlation_explicit
+#print axioms Erdos676.exists_prime_band_reciprocal_bound
+#print axioms Erdos676.boundary_error_power_bound
+#print axioms Erdos676.high_prime_averaging
+#print axioms Erdos676.finite_affine_iteration_lower
+#print axioms Erdos676.initial_avoidance_card_lower
+#print axioms Erdos676.prime_endpoint_sum_small
+#print axioms Erdos676.initial_large_prime_avoidance
+#print axioms Erdos676.exists_dyadic_retention_margin
+#print axioms Erdos676.prime_avoidance_step
+#print axioms Erdos676.prime_set_high_averaging
+#print axioms Erdos676.highPrimeBlock_log_mass
+#print axioms Erdos676.exists_small_highPrimeGap
+#print axioms Erdos676.selectedHighPrimes_avoidance
+#print axioms Erdos676.omittedHighPrimes_mass_eventually
+#print axioms Erdos676.allHighPrimes_avoidance
+#print axioms Erdos676.stable_high_avoidance
+#print axioms Erdos676.stableNaturalCenters_large_avoidance
+#print axioms Erdos676.stable_natural_centers
+#print axioms Erdos676.final_parameter_choice
+#print axioms Erdos676.eventual_exception_survival_lower
+#print axioms Erdos676.full_quantitative_disproof
+#print axioms Erdos676.full_disproof
+#print axioms Erdos676.full_unbounded_exceptions
+#print axioms Erdos676.erdos676_negative
+#print axioms Erdos676.erdos676_infinite_exceptions

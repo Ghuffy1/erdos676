@@ -1,0 +1,724 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Infinitely Many Exceptions to a Prime-Square Representation Problem of Erdos},
+ pdfauthor={Will Howe, Grant Huffman, Jensen Kohlmeyer, Liam Kruer}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\ee}[1]{\mathrm e\!\left(#1\right)}
+\newcommand{\normt}[1]{\left\|#1\right\|_{\R/\Z}}
+\DeclareMathOperator{\lcm}{lcm}
+\allowdisplaybreaks[1]
+\setlength{\emergencystretch}{2em}
+\title[Exceptions to an Erd\H{o}s representation problem]{Infinitely many exceptions to a prime-square representation problem of Erd\H{o}s}
+\author[W. Howe]{Will Howe}
+\author[G. Huffman]{Grant Huffman}
+\author[J. Kohlmeyer]{Jensen Kohlmeyer}
+\author[L. Kruer]{Liam Kruer}
+\date{November 11, 2026}
+\subjclass[2020]{Primary 11N35; Secondary 11N36, 11A07}
+\keywords{Erd\H{o}s problems, prime-square residues, sieve methods, exceptional sets}
+\thanks{\raggedright E-mail addresses: \href{mailto:howew@purdue.edu}{howew@purdue.edu} (W. Howe),
+\href{mailto:huffma97@purdue.edu}{huffma97@purdue.edu} (G. Huffman),
+\href{mailto:jenwin@purdue.edu}{jenwin@purdue.edu} (J. Kohlmeyer),
+\href{mailto:kruerl@purdue.edu}{kruerl@purdue.edu} (L. Kruer).}
+
+\begin{document}
+\begin{abstract}
+We prove that infinitely many positive integers have no representation
+$n=ap^2+b$ with $p$ prime, $a\geq1$, and $0\leq b<p$.
+More precisely, the number of such integers in $(X,2X]$ is of order
+$X/\log X$. The lower bound combines a positive-proportion avoidance
+estimate for large primes with first- and second-moment estimates for
+a short average of the small-prime sieve. A separated-frequency
+argument permits the large primes to be added in finitely many blocks.
+The small-prime moments have quadratic loss in the cutoff exponent,
+and a boundary estimate makes the large-prime avoidance stable under
+the averaging shifts.
+\end{abstract}
+\maketitle
+
+\section{The representation problem}
+
+Erd\H{o}s asked whether every sufficiently large integer can be written as
+\begin{equation}\label{eq:representation}
+ n=ap^2+b,\qquad p\ \text{prime},\quad a\geq1,\quad 0\leq b<p;
+\end{equation}
+see \cite[p.~68, problem~3]{Erdos}. Call an integer \emph{exceptional}
+if it has no representation \eqref{eq:representation}, and put
+\[
+ E(X)=\#\{n\in\Z:X<n\leq2X,\ n\text{ is exceptional}\}.
+\]
+
+\begin{theorem}\label{thm:main}
+There are constants $c,C>0$ and $X_0$ such that
+\begin{equation}\label{eq:main}
+ c\frac{X}{\log X}\leq E(X)\leq C\frac{X}{\log X}
+ \qquad(X\geq X_0).
+\end{equation}
+In particular, infinitely many positive integers have no representation
+\eqref{eq:representation}.
+\end{theorem}
+
+Erd\H{o}s recorded the upper bound in \cite[p.~68]{Erdos}.
+We prove the matching lower bound and recover the upper bound from
+the same sieve estimate.
+
+We first work with positive integer $X$ and write
+$I=(X,2X]\cap\Z$. For a prime $p$, let
+\[
+ A_p(n)=\ind_{\{n\bmod p^2<p\}},\qquad
+ V(z)=\prod_{p\leq z}\left(1-\frac1p\right),\qquad
+ S_z(n)=\prod_{p\leq z}(1-A_p(n)).
+\]
+The remainder $n\bmod p^2$ is taken in $\{0,\ldots,p^2-1\}$.
+Euclidean division shows that a prime $p$ gives a representation
+\eqref{eq:representation} precisely when $p^2\leq n$ and $A_p(n)=1$.
+The associated intervals are $[ap^2,ap^2+p-1]\cap\Z$ for $a\geq1$.
+
+All sums and products indexed by $p$ run over primes. We use
+$\mathrm e(t)=\exp(2\pi i t)$ and write $\|t\|_{\R/\Z}$ for distance
+to the nearest integer. The notation $o_\alpha(1)$ means that $\alpha$
+and all other exponent parameters have been fixed before $X$ tends
+to infinity.
+
+The classical prime estimates needed below are
+\begin{align}
+ \sum_{p\leq t}\frac1p&=\log\log t+B+o(1),&
+ V(t)&\sim\frac{e^{-\gamma}}{\log t},\label{eq:mertens}\\
+ \pi(t)&\ll\frac{t}{\log t},&
+ \vartheta(t):=\sum_{p\leq t}\log p&\ll t.\label{eq:cheb}
+\end{align}
+Here $\gamma$ is Euler's constant. These are Mertens' estimates and Chebyshev's bounds
+\cite{Mertens,Chebyshev}. Partial summation also gives
+\begin{equation}\label{eq:logmoments}
+ \sum_{p\leq t}\frac{\log p}{p}\ll\log t,
+ \qquad
+ \sum_{p\leq t}\frac{(\log p)^2}{p}\ll(\log t)^2.
+\end{equation}
+
+The proof uses a fixed dyadic cutoff $z=X^\alpha$.
+Section~\ref{sec:large} gives a positive proportion of points avoiding
+the larger primes. Section~\ref{sec:small} estimates a short average
+of $S_z$ with relative error $O(\alpha^2)$ in both moments.
+Section~\ref{sec:finish} combines the estimates and proves the theorem.
+
+\section{Avoiding the large primes}\label{sec:large}
+
+We begin with the averaging estimate that permits separated blocks of
+primes to be added successively.
+
+\begin{lemma}[Separated prime blocks]\label{lem:blocks}
+Fix $0<a\leq b\leq1/4$ and $b<c\leq1/2$.
+Let $\mathcal P$ be any set of primes in $[X^a,X^b]$, and set
+\[
+ G(n)=\sum_{p\in\mathcal P}A_p(n),\qquad
+ \lambda=\sum_{p\in\mathcal P}\frac1p.
+\]
+Let $\mathcal Q$ be any set of primes in $[X^c,2\sqrt X]$, and let
+\[
+ U(n)=\ind_I(n)\prod_{q\in\mathcal Q}(1-A_q(n)).
+\]
+There is $\delta>0$, depending only on the fixed exponents, such that
+\begin{equation}\label{eq:correlation}
+ \sum_{n\in\Z}G(n)U(n)
+ =\lambda\sum_{n\in\Z}U(n)+O(X^{1-\delta}).
+\end{equation}
+The error is uniform in $\mathcal P$ and $\mathcal Q$.
+\end{lemma}
+
+\begin{proof}
+Choose $b<\eta<c$, put $H=\lfloor X^\eta\rfloor$, and fix
+$0<\epsilon<\eta-b$. Take an even, nonnegative, smooth function
+$\phi$, supported in $[-1,1]$ and positive near zero. For large $H$,
+\[
+ \nu_H(h)=\frac{\phi(h/H)}{\sum_{r\in\Z}\phi(r/H)}
+ \quad(h\in\Z)
+\]
+is a probability measure supported on $[-H,H]$.
+For each fixed positive integer $J$, finite differencing gives
+\begin{equation}\label{eq:kerneldecay}
+ \left|\sum_h\nu_H(h)\ee{h\theta}\right|
+ \ll_J(1+H\|\theta\|_{\R/\Z})^{-J}.
+\end{equation}
+Indeed, the normalizing denominator is $\asymp H$, and the sum of
+the absolute $J$th differences of $\phi(h/H)$ is $O_J(H^{1-J})$.
+Multiplication by $(1-\mathrm e(\theta))^J$ gives
+\eqref{eq:kerneldecay}, together with the trivial bound~$1$.
+
+The Fourier expansion modulo $p^2$ is
+\[
+ A_p(n)=\sum_{k\bmod p^2}\widehat A_p(k)\ee{kn/p^2},
+ \qquad
+ \widehat A_p(k)=\frac1{p^2}\sum_{r=0}^{p-1}\ee{-kr/p^2}.
+\]
+In particular, $\widehat A_p(0)=1/p$ and
+$|\widehat A_p(k)|\leq1/p$.
+Define $G_H(n)=\sum_h\nu_H(h)G(n+h)$ and put
+$D=X^\epsilon/H$. Discard from $G_H-\lambda$ the frequencies
+with distance greater than $D$ from an integer. Their total absolute
+contribution is
+\[
+ \ll_J X^{-J\epsilon}\sum_{p\leq X^b}p
+ \ll_J X^{2b-J\epsilon},
+\]
+which is as small a power of $X$ as required after fixing $J$.
+
+Every remaining nonzero frequency has a representative $k/p^2$ with
+\[
+ 0<|k|\leq p^2D<p
+\]
+for sufficiently large $X$. It is therefore in lowest terms.
+Different labels give different points of $\R/\Z$, and their
+circular separation is at least $X^{-4b}\geq X^{-1}$.
+There are at most $2p^2D$ retained labels for each prime, so the sum
+of squared coefficients is
+\begin{equation}\label{eq:mass}
+ \ll\sum_{p\in\mathcal P}\frac{p^2D}{p^2}
+ \ll X^bD\ll X^{b+\epsilon-\eta}.
+\end{equation}
+
+For completeness, a separated family of frequencies
+$\{\theta_r\}$ with spacing at least $X^{-1}$ satisfies
+\begin{equation}\label{eq:sampling}
+ \sum_{n\in J_X}\left|\sum_r u_r\ee{n\theta_r}\right|^2
+ \ll X\sum_r|u_r|^2
+\end{equation}
+on any interval $J_X$ of length $O(X)$.
+To prove this, choose a nonnegative smooth majorant $w(n/X)$
+for the interval after translation. Twice summing by parts gives
+\[
+ \left|\sum_nw(n/X)\ee{n\theta}\right|
+ \ll X(1+X\|\theta\|_{\R/\Z})^{-2}.
+\]
+Spacing implies that each row sum of these bounds is $O(X)$.
+Expanding the square and using
+$2|u_ru_s|\leq|u_r|^2+|u_s|^2$ proves \eqref{eq:sampling}.
+Combining \eqref{eq:mass} and \eqref{eq:sampling}, and including
+the discarded frequencies, yields some $\delta_1>0$ for which
+\begin{equation}\label{eq:smoothnorm}
+ \sum_{X-H\leq n\leq2X+H}|G_H(n)-\lambda|^2
+ \ll X^{1-\delta_1}.
+\end{equation}
+
+Enlarge and contract both the ambient interval and every forbidden
+residue interval by $H$ at its endpoints. This gives indicators
+$U_-$ and $U_+$ such that, for $|h|\leq H$,
+\[
+ U_-(n-h)\leq U(n)\leq U_+(n-h).
+\]
+The enlarged ambient interval lies in $[X-H,2X+H]$.
+For a prime $q$, the boundary change meets at most
+$O(H(X/q^2+1))$ integers in that interval. Thus
+\begin{align*}
+ \sum_n(U_+(n)-U_-(n))
+ &\ll H+H\sum_{X^c\leq q\leq2\sqrt X}(X/q^2+1)\\
+ &\ll HX^{1-c},
+\end{align*}
+where the reciprocal-square tail can be bounded by the sum over all
+integers and $c\leq1/2$. Also $\lambda=O_{a,b}(1)$ by
+\eqref{eq:mertens}.
+
+Since $G\geq0$, averaging the pointwise comparisons and changing
+variables gives
+\[
+ \sum_n U_-(n)G_H(n)\leq\sum_nU(n)G(n)
+ \leq\sum_nU_+(n)G_H(n).
+\]
+Cauchy--Schwarz and \eqref{eq:smoothnorm} bound either centered
+sum by $O(X^{1-\delta_1/2})$.
+The boundary error is $O(HX^{1-c})$, which also saves a positive
+power because $\eta<c$. This proves \eqref{eq:correlation}.
+\end{proof}
+
+Put $d=1-\log2$. We have $1/4<d<1$, since
+$\exp(3/4)>1+3/4+(3/4)^2/2>2$.
+
+\begin{proposition}\label{prop:large}
+There is an absolute constant $c_0>0$ such that, for every fixed
+integer $L\geq2$, with $\alpha=2^{-L}$,
+\begin{equation}\label{eq:largecount}
+ \#\{n\in I:A_p(n)=0\text{ for every }X^\alpha<p\leq2\sqrt X\}
+ \geq c_0d^L X
+\end{equation}
+for all sufficiently large $X$, depending on $L$.
+\end{proposition}
+
+\begin{proof}
+Each prime contributes $X/p+O(p)$ points of $I$ to its forbidden
+residues. Consequently the number of points surviving all primes
+$X^{1/4}<p\leq2\sqrt X$ is at least
+\begin{align*}
+ X-X\sum_{X^{1/4}<p\leq2\sqrt X}\frac1p
+ -O\left(\sum_{p\leq2\sqrt X}p\right)
+ =(d-o(1))X.
+\end{align*}
+Here \eqref{eq:mertens} gives the reciprocal sum $\log2+o(1)$,
+and \eqref{eq:cheb} gives $\sum_{p\leq2\sqrt X}p\ll X/\log X$.
+
+Set $K=L-2$ and $c_j=2^{-j}/4$ for $0\leq j\leq K$.
+Fix $0<\tau<1/2$ and add, in the order $j=0,\ldots,K-1$, the blocks
+\[
+ X^{c_{j+1}}<p\leq X^{(1-\tau)c_j}.
+\]
+At stage $j$, the previously imposed primes are all greater than
+$X^{c_j}$, so Lemma~\ref{lem:blocks} applies. The reciprocal mass
+of the new block tends to
+$\log(2(1-\tau))<\log2$.
+If $N_j$ points survive before the block is added, the union bound
+and \eqref{eq:correlation} give
+\[
+ N_{j+1}\geq dN_j-o(X).
+\]
+There are only $K$ stages, all fixed before $X\to\infty$.
+The final selected-prime count is therefore at least
+$(d^{K+1}-o(1))X$.
+
+The omitted gaps are
+$X^{(1-\tau)c_j}<p\leq X^{c_j}$.
+Their total reciprocal mass tends to $K[-\log(1-\tau)]$.
+Removing all their forbidden points costs at most
+\[
+ \bigl(K[-\log(1-\tau)]+o(1)\bigr)X;
+\]
+their combined $O(p)$ errors are $o(X)$ by \eqref{eq:cheb}.
+Choose $\tau$, still at fixed $K$, so that
+$K[-\log(1-\tau)]<d^{K+1}/4$.
+For large $X$ at least $d^{K+1}X/2$ points remain.
+This gives \eqref{eq:largecount} with $c_0=1/(2d)$.
+The case $K=0$ follows directly from the initial estimate.
+\end{proof}
+
+\section{The averaged small-prime sieve}\label{sec:small}
+
+Fix a small positive $\alpha$ and define
+\begin{equation}\label{eq:average}
+ z=X^\alpha,\qquad
+ \eta=\alpha(1-\alpha^2),\qquad
+ H=\lfloor X^\eta\rfloor,\qquad
+ B(n)=\frac1H\sum_{j=0}^{H-1}S_z(n+j).
+\end{equation}
+The following proposition supplies the two estimates used in the
+final argument.
+
+\begin{proposition}\label{prop:moments}
+There are absolute constants $C_1,C_2>0$ such that, for all
+sufficiently small fixed $\alpha>0$,
+\begin{align}
+ \sum_{n\in I}B(n)&\geq
+ (1-C_1\alpha^2-o_\alpha(1))XV(z),\label{eq:first}\\
+ \sum_{n\in I}B(n)^2&\leq
+ (1+C_2\alpha^2+o_\alpha(1))XV(z)^2.\label{eq:second}
+\end{align}
+\end{proposition}
+
+\subsection{The first moment}
+
+Partition the primes through $z$ into nonempty blocks
+\[
+ \mathcal P_j=\{p:z^{2^{-j-1}}<p\leq z^{2^{-j}}\},
+ \qquad 0\leq j\leq J,
+\]
+ending when the lower endpoint is below $2$.
+Then $J=O(1+\log\log z)$.
+By \eqref{eq:mertens}, the sums $\sum_{p\in\mathcal P_j}1/p$
+are bounded by an absolute constant $C_0$, uniformly in $z,j$.
+Moreover,
+\begin{equation}\label{eq:blocksurvival}
+ V_j:=\prod_{p\in\mathcal P_j}(1-1/p)\geq v_0>0
+\end{equation}
+uniformly, since $-\log(1-1/p)\leq2/p$ for $p\geq2$.
+
+Choose an absolute integer $L_0$ so large that
+$C_0^k/k!\leq2^{-k}$ for $k\geq2L_0$, and put
+\[
+ T=\lceil\log_2(1/\alpha)\rceil+L_0,\qquad k_j=2T+2j.
+\]
+For $K_j(n)=\sum_{p\in\mathcal P_j}A_p(n)$, the Bonferroni
+polynomials
+\[
+ U_j(n)=\sum_{i=0}^{k_j}(-1)^i\binom{K_j(n)}i,
+ \qquad
+ L_j(n)=\sum_{i=0}^{k_j-1}(-1)^i\binom{K_j(n)}i
+\]
+satisfy
+\[
+ L_j\leq\ind_{\{K_j=0\}}\leq U_j,
+ \qquad U_j\geq0,\qquad U_j-L_j=\binom{K_j}{k_j}.
+\]
+Telescoping the product, using the nonnegativity of the upper
+polynomials, gives
+\begin{equation}\label{eq:bonfproduct}
+ S_z(n)\geq\prod_jU_j(n)
+ -\sum_j(U_j(n)-L_j(n))\prod_{i\ne j}U_i(n).
+\end{equation}
+
+Replace the variables $A_p(n)$ temporarily by independent Bernoulli
+variables of means $1/p$. For a single block,
+\[
+ \E U_j\geq V_j,\qquad
+ \E(U_j-L_j)\leq\frac{C_0^{k_j}}{k_j!}\leq2^{-k_j}.
+\]
+Also $\E U_j-V_j\leq\E(U_j-L_j)$, so
+$\E U_j\leq V_j(1+v_0^{-1}2^{-k_j})$.
+Independence between blocks and \eqref{eq:blocksurvival} show that
+the expectation of the right side of \eqref{eq:bonfproduct} is at least
+\[
+ V(z)\left(1-O\left(\sum_j2^{-k_j}\right)\right)
+ \geq V(z)(1-O(\alpha^2)).
+\]
+
+To transfer this bound to integers, expand \eqref{eq:bonfproduct}
+into products of distinct $A_p$.
+Every resulting squarefree modulus $m$ satisfies
+\[
+ m\leq z^{\sum_{j\geq0}k_j2^{-j}}
+ =z^{4T+4}\leq X^{1/4}
+\]
+when $\alpha$ is sufficiently small.
+Each coefficient has absolute value at most $J+2$.
+The Chinese remainder theorem gives exactly $m$ forbidden residue
+classes modulo $m^2$ for a product indexed by $m$, hence its sum
+over $I$ is $X/m+O(m)$.
+The total transfer error is bounded by
+\[
+ O\left((J+2)\sum_{m\leq X^{1/4}}m\right)
+ =O((J+2)X^{1/2})=o(XV(z)).
+\]
+Thus $\sum_{n\in I}S_z(n)\geq(1-C_1\alpha^2-o_\alpha(1))XV(z)$.
+Translating $I$ by an integer $0\leq j<H$ changes the sum of
+$S_z$, which lies between zero and one, by at most $2H$.
+Since $H=o(XV(z))$, averaging these translates proves
+\eqref{eq:first}.
+
+\subsection{A uniform two-position bound}\label{subsec:selberg}
+
+For an integer $k$, let $a_p(k)$ be the cardinality of the intersection
+of the forbidden residue sets at $n$ and $n+k$ modulo $p^2$.
+Set
+\[
+ g_k(p)=\frac2p-\frac{a_p(k)}{p^2},\qquad
+ V_k=\prod_{p\leq z}(1-g_k(p)).
+\]
+Thus $g_k(p)$ is the density of the union of these two residue sets,
+and $1/p\leq g_k(p)\leq2/p$.
+
+\begin{lemma}\label{lem:twoposition}
+For sufficiently small fixed $\alpha>0$, uniformly in $k$ and in
+integer intervals $J_X$ of length $X$,
+\begin{equation}\label{eq:twoposition}
+ \sum_{n\in J_X}S_z(n)S_z(n+k)
+ \leq(1+C\alpha^2)XV_k+O(X^{3/5}),
+\end{equation}
+where $C$ and the implied constant are absolute.
+\end{lemma}
+
+\begin{proof}
+If $g_k(p)=1$ for some $p$, then $V_k=0$ and the left side is zero.
+We may therefore suppose $0<g_k(p)<1$ for every
+$p\leq z$, and write $g(p)=g_k(p)$.
+Extend $g$ multiplicatively to squarefree products of primes through
+$z$, and put
+\[
+ q(r)=\prod_{p\mid r}\frac{g(p)}{1-g(p)},\qquad
+ R=\lfloor X^{1/10}\rfloor,\qquad
+ G_R=\sum_{r\leq R}q(r).
+\]
+All moduli in this proof are squarefree and supported on primes
+through $z$; in particular $g(1)=q(1)=1$.
+
+Let $F_r(n)$ indicate that the union event occurs for every $p\mid r$.
+For real weights $\lambda_r$ supported on $r\leq R$, with
+$\lambda_1=1$, the square
+$(\sum_r\lambda_rF_r(n))^2$ majorizes $S_z(n)S_z(n+k)$.
+Its main term after summation over $J_X$ is
+\[
+ XQ(\lambda),\qquad
+ Q(\lambda)=\sum_{r,s\leq R}\lambda_r\lambda_sg([r,s]).
+\]
+Writing $y_t=\sum_{t\mid r}g(r)\lambda_r$, one has
+\begin{equation}\label{eq:diagonal}
+ Q(\lambda)=\sum_{t\leq R}\frac{y_t^2}{q(t)},
+ \qquad \lambda_1=\sum_{t\leq R}\mu(t)y_t.
+\end{equation}
+The first identity follows by expanding
+$1/g((r,s))=\sum_{t\mid(r,s)}1/q(t)$, and the second is
+M\"obius inversion.
+Choose $y_t=\mu(t)q(t)/G_R$.
+Then $\lambda_1=1$, $Q(\lambda)=1/G_R$, and inversion gives
+\begin{equation}\label{eq:weights}
+ \lambda_r=\frac{\mu(r)}{G_R}
+ \prod_{p\mid r}(1-g(p))^{-1}
+ \sum_{\substack{s\leq R/r\\(s,r)=1}}q(s).
+\end{equation}
+In particular $|\lambda_r|\leq1$.
+Indeed, the numerator without its sign equals
+$\sum_{s\leq R/r,(s,r)=1}\sum_{e\mid r}q(se)$;
+the products $se$ are distinct and all at most $R$, so this is a
+subsum of $G_R$.
+
+For $m=[r,s]$, the union conditions occupy
+$\prod_{p\mid m}(2p-a_p(k))\leq m^2$ residue classes modulo $m^2$.
+The Chinese remainder theorem therefore gives
+\[
+ \sum_{n\in J_X}F_m(n)=Xg(m)+O(m^2).
+\]
+There are at most $R^2$ pairs $(r,s)$ and $m\leq R^2$.
+Using $|\lambda_r|\leq1$, the total error is $O(R^6)$, and hence
+\begin{equation}\label{eq:selbergpre}
+ \sum_{n\in J_X}S_z(n)S_z(n+k)\leq X/G_R+O(R^6).
+\end{equation}
+
+For independent Bernoulli variables $Z_p$ with means $g(p)$,
+\[
+ G_RV_k=\Prob\left(\sum_{p\leq z}Z_p\log p\leq\log R\right).
+\]
+The mean of the sum is $O(\log z)$, and its variance is
+$O((\log z)^2)$ by \eqref{eq:logmoments} and $g(p)\leq2/p$.
+Its second moment is therefore $O((\log z)^2)$.
+Markov's inequality applied to its square gives
+$G_RV_k\geq1-C'\alpha^2$ for large $X$.
+After making $\alpha$ smaller if necessary,
+$1/G_R\leq(1+C\alpha^2)V_k$.
+Substitution in \eqref{eq:selbergpre}, with $R^6\leq X^{3/5}$,
+proves the lemma.
+\end{proof}
+
+\subsection{Averaging the local factors}
+
+For $|k|<H$, put $w_H(k)=(H-|k|)/H^2$, and put $w_H(k)=0$
+otherwise. These are the probabilities of the difference of two
+independent uniform integers in $\{0,\ldots,H-1\}$.
+In particular, $\sum_kw_H(k)=1$ and $w_H(k)\leq1/H$.
+
+\begin{lemma}\label{lem:localmean}
+With the parameters \eqref{eq:average},
+\begin{equation}\label{eq:localmean}
+ \sum_kw_H(k)\frac{V_k}{V(z)^2}
+ \leq(1-\alpha^2)^{-2}+o_\alpha(1).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Write
+\[
+ R_p(k)=\frac{1-g_k(p)}{(1-1/p)^2}
+ =1+\frac{a_p(k)-1}{(p-1)^2},\qquad
+ v_p(k)=(R_p(k)-1)_+.
+\]
+The function $R_p$ has period $p^2$, is nonnegative, and is at most
+$p/(p-1)$. Counting the pairs of forbidden residues gives
+$\sum_{k\bmod p^2}a_p(k)=p^2$, so $R_p$ has mean one over a period.
+Also
+\begin{equation}\label{eq:vp}
+ 0\leq v_p(k)\leq\frac{a_p(k)}{(p-1)^2},\qquad
+ \frac1{p^2}\sum_{k\bmod p^2}v_p(k)\leq\frac1{(p-1)^2},
+ \qquad 1+v_p(k)\leq\frac p{p-1}.
+\end{equation}
+
+Choose a sufficiently small absolute $c_1>0$ and put
+\[
+ Y=c_1\log H,\qquad M=\prod_{p\leq Y}p^2,\qquad
+ L(k)=\prod_{p\leq Y}R_p(k).
+\]
+By \eqref{eq:cheb}, $M\leq H^{1/4}$.
+The Chinese remainder theorem shows that $L$ has mean one modulo $M$.
+A uniform integer in $\{0,\ldots,H-1\}$ has residue probabilities
+$1/M+O(1/H)$; convolving with another probability distribution
+preserves this error bound. Consequently
+\begin{equation}\label{eq:headmean}
+ \sum_kw_H(k)L(k)=1+O(M/H).
+\end{equation}
+
+Set $Y_0=H^{1/4}$ and $Y_1=H^{1-\alpha^2}$.
+For $Y<p\leq Y_0$, the nonnegative function $Lv_p$ has period
+$Mp^2$ and, by the Chinese remainder theorem, period mean
+$O(p^{-2})$. Counting complete periods and at most two incomplete
+periods in $|k|<H$, and using $w_H\leq1/H$, gives
+\[
+ \sum_kw_H(k)L(k)v_p(k)\ll p^{-2}+M/H.
+\]
+By \eqref{eq:mertens} and \eqref{eq:vp},
+\[
+ \prod_{Y<p\leq Y_0}(1+v_p(k))\ll\frac{\log Y_0}{\log Y}.
+\]
+Telescoping this product and summing the preceding estimate show that
+its insertion after $L$ increases the weighted mean by at most
+\[
+ O\left(\frac{\log Y_0}{\log Y}
+       \left(\frac1Y+\frac{MY_0}{H}\right)\right)=o(1).
+\]
+
+For $Y_0<p\leq Y_1$, the same period-counting argument without $L$
+gives
+\[
+ \sum_kw_H(k)v_p(k)\ll p^{-2}+H^{-1}.
+\]
+The product of $1+v_p$ in this range is $O_\alpha(1)$.
+The preceding product, including $L$, is pointwise $O(\log Y_0)$
+by \eqref{eq:mertens}. A second telescoping estimate therefore
+bounds the additional weighted mean by
+\[
+ O_\alpha\left(\log Y_0
+       \left(\frac1{Y_0}+\frac{Y_1}{H}\right)\right)=o_\alpha(1).
+\]
+Together with \eqref{eq:headmean}, this proves
+\[
+ \sum_kw_H(k)\prod_{p\leq Y_1}R_p(k)\leq1+o_\alpha(1).
+\]
+Finally,
+\[
+ \prod_{Y_1<p\leq z}R_p(k)
+ \leq\prod_{Y_1<p\leq z}\frac p{p-1}
+ =(1+o_\alpha(1))\frac{\log z}{\log Y_1}.
+\]
+Since $\log H\sim\eta\log X$,
+\[
+ \frac{\log z}{\log Y_1}\longrightarrow
+ \frac{\alpha}{(1-\alpha^2)\eta}=(1-\alpha^2)^{-2}.
+\]
+All factors are nonnegative, so the last pointwise estimate can be
+multiplied into the preceding weighted bound. This proves
+\eqref{eq:localmean}.
+\end{proof}
+
+To finish Proposition~\ref{prop:moments}, expand the square in
+\eqref{eq:average}. For each pair of shifts $i,j$, apply
+Lemma~\ref{lem:twoposition} on $I+i$ with $k=j-i$.
+Averaging the pairs and then using Lemma~\ref{lem:localmean} gives
+\[
+ \sum_{n\in I}B(n)^2
+ \leq(1+C\alpha^2)XV(z)^2
+       \bigl((1-\alpha^2)^{-2}+o_\alpha(1)\bigr)+O(X^{3/5}).
+\]
+For small $\alpha$, $(1-\alpha^2)^{-2}=1+O(\alpha^2)$, and
+$X^{3/5}=o(XV(z)^2)$ by \eqref{eq:mertens}.
+This is \eqref{eq:second}; the first moment was proved above.
+
+\section{Stable centers and the exceptional set}\label{sec:finish}
+
+\begin{lemma}\label{lem:stable}
+Let $\alpha=2^{-L}$ with fixed $L\geq2$, and let $H$ be as in
+\eqref{eq:average}. There is a set $U^*\subset I$ with
+\begin{equation}\label{eq:stablecount}
+ |U^*|\geq c_2d^L X
+\end{equation}
+for an absolute $c_2>0$ and all sufficiently large $X$, such that
+every $n\in U^*$ and $0\leq j<H$ satisfy
+\begin{equation}\label{eq:stableproperty}
+ n+j\in I,\qquad A_p(n+j)=0
+ \quad(X^\alpha<p\leq2\sqrt X).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Start with the set counted in Proposition~\ref{prop:large}.
+Delete its points within $H$ of either endpoint of $I$, and delete
+the points meeting any forbidden residue interval enlarged by $H$
+at both ends. A prime $p$ contributes at most
+$O(H(X/p^2+1))$ additional deleted points. The total loss is
+\[
+ O\left(H+H\sum_{X^\alpha<p\leq2\sqrt X}(X/p^2+1)\right)
+ \ll HX^{1-\alpha}=o_\alpha(X),
+\]
+because $\eta=\alpha(1-\alpha^2)<\alpha$ and $\alpha\leq1/4$.
+The remaining set satisfies \eqref{eq:stableproperty}, and
+\eqref{eq:stablecount} holds with $c_2=c_0/2$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+We first prove the lower bound. Let $C_1,C_2$ be the constants in
+Proposition~\ref{prop:moments}.
+Since $d>1/4$,
+\[
+ \frac{(2^{-L})^2}{d^L}=(4d)^{-L}\longrightarrow0.
+\]
+Choose $L$ sufficiently large, put $\alpha=2^{-L}$, and set
+$\rho=c_2d^L$. We can require $0<\rho\leq1$ and
+$\max(C_1,C_2)\alpha^2\leq\rho/16$.
+Then fix this $L$ and take $X$ sufficiently large to absorb all
+$o_\alpha(1)$ errors into $\rho/16$.
+Writing $V=V(z)$, we obtain
+\[
+ \sum_{n\in I}B(n)\geq(1-\rho/8)XV,
+ \qquad
+ \sum_{n\in I}B(n)^2\leq(1+\rho/8)XV^2,
+ \qquad |I\setminus U^*|\leq(1-\rho)X.
+\]
+Cauchy--Schwarz now gives
+\begin{align*}
+ \sum_{n\in U^*}B(n)
+ &\geq \sum_{n\in I}B(n)
+   -\sqrt{|I\setminus U^*|\sum_{n\in I}B(n)^2}\\
+ &\geq XV\left(1-\frac\rho8
+             -\sqrt{(1-\rho)(1+\rho/8)}\right)
+ \geq\frac\rho8 XV.
+\end{align*}
+The last inequality follows from
+$(1-\rho)(1+\rho/8)\leq(1-\rho/4)^2$ for $0\leq\rho\leq1$.
+
+Whenever $n\in U^*$ and a term $S_z(n+j)$ in $B(n)$ equals one,
+the integer $m=n+j$ lies in $I$ and avoids every prime through $z$.
+It also avoids the primes $z<p\leq2\sqrt X$ by
+\eqref{eq:stableproperty}.
+A larger prime has $p^2>2X$, so it cannot occur in a representation
+of $m$. Thus $m$ is exceptional.
+For any fixed $m$, at most $H$ pairs $(n,j)$ satisfy $m=n+j$ with
+$0\leq j<H$. Therefore
+\[
+ E(X)\geq\frac1H\sum_{n\in U^*}\sum_{j=0}^{H-1}S_z(n+j)
+ =\sum_{n\in U^*}B(n)\geq\frac\rho8 XV(z)
+ \gg\frac{X}{\log X}
+\]
+by \eqref{eq:mertens}.
+
+For the upper bound, keep one sufficiently small fixed $\alpha$.
+For large $X$, every prime $p\leq z$ satisfies $p^2<X$.
+Every exceptional integer in $I$ is consequently counted by $S_z$.
+In Lemma~\ref{lem:twoposition}, take $k=0$.
+Then $S_z(n)^2=S_z(n)$ and $V_0=V(z)$, giving
+\[
+ E(X)\leq\sum_{n\in I}S_z(n)
+ \leq(1+C\alpha^2)XV(z)+O(X^{3/5})
+ \ll\frac{X}{\log X}.
+\]
+This proves \eqref{eq:main} for integer $X$.
+For real $X$, replacing $X$ by $\lfloor X\rfloor$ changes the
+integer interval $(X,2X]$ by at most two points and changes
+$X/\log X$ by a factor tending to one.
+The same two bounds follow after adjusting the constants.
+\end{proof}
+
+\section*{Acknowledgment}
+The authors acknowledge assistance from OpenAI's ChatGPT in developing
+the argument, checking intermediate estimates, and preparing the exposition.
+
+\begin{thebibliography}{9}
+\bibitem{Erdos}
+P. Erd\H{o}s, \href{https://users.renyi.hu/~p_erdos/1979-22.pdf}{\emph{Some unconventional problems in number theory}},
+Mathematics Magazine \textbf{52} (1979), no.~2, 67--70.
+
+\bibitem{Mertens}
+F. Mertens, \emph{Ein Beitrag zur analytischen Zahlentheorie},
+Journal f\"ur die reine und angewandte Mathematik \textbf{78} (1874), 46--62.
+\href{https://doi.org/10.1515/crll.1874.78.46}{doi:10.1515/crll.1874.78.46}.
+
+\bibitem{Chebyshev}
+P. L. Tchebichef, \href{https://www.numdam.org/item/JMPA_1852_1_17__366_0/}{\emph{M\'emoire sur les nombres premiers}},
+Journal de Math\'ematiques Pures et Appliqu\'ees, s\'er.~1,
+\textbf{17} (1852), 366--390.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,26 @@
+name = "erdos676"
+version = "1.0.0"
+defaultTargets = ["Erdos676", "SubmissionAudit"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "5ed2965256430c3649e86755f9576b54eca72435"
+
+[[lean_lib]]
+name = "Architect"
+srcDir = "vendor"
+
+[[lean_lib]]
+name = "PrimeNumberTheoremAnd"
+srcDir = "vendor"
+globs = ["PrimeNumberTheoremAnd.+"]
+
+[[lean_lib]]
+name = "Erdos676"
+globs = ["Erdos676.*"]
+
+[[lean_lib]]
+name = "SubmissionAudit"
+srcDir = "audit"
