@@ -9,7 +9,7 @@ The four authors receive equal contribution credit for the mathematical solution
 | Jensen Kohlmeyer | JENW1N | Equal contributor |
 | Liam Kruer | lkruer | Equal contributor |
 
-The intended original repository is `Ghuffy1/erdos676`, on branch `main`. This repository is being prepared privately. The ownership and submission roles above follow the project owner's instructions.
+The original repository is `Ghuffy1/erdos676`, on branch `main`. The ownership, equal credit and submission roles above follow the project owner's instructions. Publication and the combined JSP submission were authorized by the project owner after the final verification.
 
 ## AI assistance
 

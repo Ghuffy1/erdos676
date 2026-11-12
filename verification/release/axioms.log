@@ -1,0 +1,20 @@
+Erdos676.erdos676_negative : ¬∀ᶠ (n : ℕ) in atTop, ∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ b < p ∧ n = a * p ^ 2 + b
+Erdos676.erdos676_infinite_exceptions : {n | ¬∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ b < p ∧ n = a * p ^ 2 + b}.Infinite
+Erdos676.full_quantitative_disproof : Erdos676.QuantitativeDisproof
+JSP000549.original_question_negative : ¬JSP000549.OriginalQuestion
+JSP000549.arbitrarily_large_exceptions : ∀ (N : ℕ),
+  ∃ n, N ≤ n ∧ ¬∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ b < p ∧ n = a * p ^ 2 + b
+def JSP000549.OriginalQuestion : Prop :=
+∀ᶠ (n : ℕ) in atTop, ∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ 0 ≤ b ∧ b < p ∧ n = a * p ^ 2 + b
+def Erdos676.Representable : ℕ → Prop :=
+fun n => ∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ b < p ∧ n = a * p ^ 2 + b
+def Erdos676.EventualRepresentation : Prop :=
+∀ᶠ (n : ℕ) in atTop, Erdos676.Representable n
+def Erdos676.QuantitativeDisproof : Prop :=
+∃ c, 0 < c ∧ ∀ᶠ (X : ℕ) in atTop, c * ↑X / Real.log ↑X ≤ ↑(Erdos676.dyadicExceptions X).card
+'Erdos676.erdos676_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos676.erdos676_infinite_exceptions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos676.full_quantitative_disproof' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000549.question_equivalent' depends on axioms: [propext, Quot.sound]
+'JSP000549.original_question_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000549.arbitrarily_large_exceptions' depends on axioms: [propext, Classical.choice, Quot.sound]

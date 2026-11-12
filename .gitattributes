@@ -2,3 +2,4 @@
 *.pdf binary
 *.png binary
 verification/*.log -text
+verification/**/*.log -text

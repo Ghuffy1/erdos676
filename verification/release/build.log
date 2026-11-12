@@ -1,0 +1,447 @@
+⚠ [2437/2457] Replayed Erdos676.NormalizedFactors
+warning: Erdos676/NormalizedFactors.lean:23:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos676/NormalizedFactors.lean:33:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos676/NormalizedFactors.lean:44:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3363/3375] Replayed Erdos676.ResidueFourier
+warning: Erdos676/ResidueFourier.lean:59:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Erdos676/ResidueFourier.lean:67:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3806/3952] Replayed Erdos676.PrimeFrequencySeparation
+warning: Erdos676/PrimeFrequencySeparation.lean:47:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos676/PrimeFrequencySeparation.lean:47:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3807/3952] Replayed Erdos676.FrequencyCount
+warning: Erdos676/FrequencyCount.lean:11:65: Variable name `hD` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hD
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos676/FrequencyCount.lean:57:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3809/3952] Replayed Erdos676.BoxPaths
+warning: Erdos676/BoxPaths.lean:11:25: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos676/BoxPaths.lean:11:27: Variable name `hj` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hj
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3819/3952] Replayed Erdos676.FrequencyDecomposition
+warning: Erdos676/FrequencyDecomposition.lean:62:9: Variable name `k` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _k
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3839/3952] Replayed Erdos676.ResidueBoundaryCounts
+warning: Erdos676/ResidueBoundaryCounts.lean:32:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos676/ResidueBoundaryCounts.lean:32:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos676/ResidueBoundaryCounts.lean:39:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3840/3952] Replayed Erdos676.AvoidanceBoundaryCards
+warning: Erdos676/AvoidanceBoundaryCards.lean:27:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Erdos676/AvoidanceBoundaryCards.lean:55:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3849/3952] Replayed Erdos676.IntervalSums
+warning: Erdos676/IntervalSums.lean:14:35: This simp argument is unused:
+  ha
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hPa, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos676/IntervalSums.lean:14:39: This simp argument is unused:
+  hPa
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ha, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos676/IntervalSums.lean:14:44: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ha, hPa]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3850/3952] Replayed Erdos676.AvoidanceIteration
+warning: Erdos676/AvoidanceIteration.lean:28:66: This simp argument is unused:
+  hn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hcond, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos676/AvoidanceIteration.lean:28:70: This simp argument is unused:
+  hcond
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hn, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos676/AvoidanceIteration.lean:28:77: This simp argument is unused:
+  ih
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hn, hcond]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3851/3952] Replayed Erdos676.InitialAvoidanceBound
+warning: Erdos676/InitialAvoidanceBound.lean:13:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3871/3952] Replayed Erdos676.ResidueSieve
+warning: Erdos676/ResidueSieve.lean:113:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3875/3952] Replayed Erdos676.BlockParameters
+warning: Erdos676/BlockParameters.lean:55:15: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3886/3952] Replayed Erdos676.GrowingDyadic
+warning: Erdos676/GrowingDyadic.lean:28:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3887/3952] Replayed Erdos676.HighPrimeBlocks
+warning: Erdos676/HighPrimeBlocks.lean:51:39: Variable name `hτ0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hτ0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3889/3952] Replayed Erdos676.PowerFloorLog
+warning: Erdos676/PowerFloorLog.lean:34:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos676/PowerFloorLog.lean:34:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3906/3952] Replayed Erdos676.SingularAverages
+warning: Erdos676/SingularAverages.lean:22:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Erdos676/SingularAverages.lean:23:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Erdos676/SingularAverages.lean:38:21: `if_true` has been deprecated: Use `ite_true` instead
+warning: Erdos676/SingularAverages.lean:41:21: `if_false` has been deprecated: Use `ite_false` instead
+warning: Erdos676/SingularAverages.lean:50:35: `if_false` has been deprecated: Use `ite_false` instead
+⚠ [3919/3952] Replayed Erdos676.SingularCoreArithmetic
+warning: Erdos676/SingularCoreArithmetic.lean:34:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3920/3952] Replayed Erdos676.FloorMertensRatio
+warning: Erdos676/FloorMertensRatio.lean:42:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos676/FloorMertensRatio.lean:42:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ℹ [3929/3952] Replayed Erdos676.FourierPowers
+info: Erdos676/FourierPowers.lean:44:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [3939/3952] Replayed Erdos676.PrimeAvoidSets
+warning: Erdos676/PrimeAvoidSets.lean:94:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Erdos676/PrimeAvoidSets.lean:95:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3940/3952] Replayed Erdos676.HighPrimeFamilies
+warning: Erdos676/HighPrimeFamilies.lean:80:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3944/3952] Replayed Erdos676.StablePrimeAvoidance
+warning: Erdos676/StablePrimeAvoidance.lean:40:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+ℹ [3949/3952] Replayed Erdos676.Audit
+info: Erdos676/Audit.lean:38:0: 'Erdos676.representable_iff_mod' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:39:0: 'Erdos676.not_eventual_iff_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:40:0: 'Erdos676.unbounded_iff_infinite' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:41:0: 'Erdos676.restricted_mass_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:42:0: 'Erdos676.positive_restricted_mass_of_moment_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:43:0: 'Erdos676.sum_overlap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:44:0: 'Erdos676.translated_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:45:0: 'Erdos676.smallAverage_mass_le_exceptions' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:46:0: 'Erdos676.SieveData.exception_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:47:0: 'Erdos676.disproof_of_eventual_sieve_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:48:0: 'Erdos676.moment_gap_from_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:49:0: 'Erdos676.sum_normalizedFactor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:50:0: 'Erdos676.alternatingChoose_even_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:51:0: 'Erdos676.alternatingChoose_odd_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:52:0: 'Erdos676.exists_linear_quadratic_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:53:0: 'Erdos676.prime_reciprocal_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:54:0: 'Erdos676.survivalProduct_asymptotic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:55:0: 'Erdos676.quantitativeDisproof_implies_disproof' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:56:0: 'Erdos676.product_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:57:0: 'Erdos676.weighted_square_tail_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:58:0: 'Erdos676.periodic_count_scaled_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:59:0: 'Erdos676.prime_power_band_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:60:0: 'Erdos676.residueCondition_count_period' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:61:0: 'Erdos676.residueCondition_interval_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:62:0: 'Erdos676.prime_square_condition_count_period' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:63:0: 'Erdos676.prime_square_interval_scaled_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:64:0: 'Erdos676.truncated_sieve_normalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:65:0: 'Erdos676.bernoulli_first_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:66:0: 'Erdos676.bernoulli_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:67:0: 'Erdos676.truncated_sieve_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:68:0: 'Erdos676.bernoulli_prime_log_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:69:0: 'Erdos676.prime_sieve_normalizer_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:70:0: 'Erdos676.twoPositionDensity_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:71:0: 'Erdos676.normalized_overlap_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:72:0: 'Erdos676.quantitative_dyadic_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:73:0: 'Erdos676.symmetric_row_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:74:0: 'Erdos676.inverse_normalizer_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:75:0: 'Erdos676.crt_product_mean_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:76:0: 'Erdos676.periodic_sum_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:77:0: 'Erdos676.periodic_double_average_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:78:0: 'Erdos676.crt_double_average_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:79:0: 'Erdos676.selberg_square_upper_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:80:0: 'Erdos676.bernoulli_product_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:81:0: 'Erdos676.bernoulliBasis_orthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:82:0: 'Erdos676.selbergMixture_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:83:0: 'Erdos676.eventBasis_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:84:0: 'Erdos676.basisCoefficient_abs_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:85:0: 'Erdos676.bernoulli_event_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:86:0: 'Erdos676.eventBasis_inner_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:87:0: 'Erdos676.selberg_avoidance_upper_from_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:88:0: 'Erdos676.square_residue_sieve_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:89:0: 'Erdos676.selbergNormalizer_log_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:90:0: 'Erdos676.square_residue_sieve_moment_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:91:0: 'Erdos676.prime_index_log_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:92:0: 'Erdos676.prime_square_sieve_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:93:0: 'Erdos676.two_shift_sieve_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:94:0: 'Erdos676.event_choose_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:95:0: 'Erdos676.bonferroniEvent_even_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:96:0: 'Erdos676.bonferroniEvent_odd_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:97:0: 'Erdos676.bonferroni_model_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:98:0: 'Erdos676.bonferroniModel_even_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:99:0: 'Erdos676.elementary_sum_geometric_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:100:0: 'Erdos676.survival_product_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:101:0: 'Erdos676.bonferroniModel_relative_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:102:0: 'Erdos676.block_degree_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:103:0: 'Erdos676.grouped_bonferroni_model_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:104:0: 'Erdos676.truncated_block_weight_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:105:0: 'Erdos676.disjoint_polynomial_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:106:0: 'Erdos676.bounded_block_product_count_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:107:0: 'Erdos676.product_bracket_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:108:0: 'Erdos676.grouped_first_moment_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:109:0: 'Erdos676.prime_block_first_moment_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:110:0: 'Erdos676.exists_half_power_prime_mass_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:111:0: 'Erdos676.dyadicPrimeBlocks_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:112:0: 'Erdos676.dyadicPrimeBlock_mass_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:113:0: 'Erdos676.dyadic_error_product_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:114:0: 'Erdos676.dyadic_first_moment_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:115:0: 'Erdos676.growing_dyadic_covers' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:116:0: 'Erdos676.eventually_power_error_absorbed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:117:0: 'Erdos676.smallPrimeCount_finite_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:118:0: 'Erdos676.smallAverage_dyadic_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:119:0: 'Erdos676.smallAverage_first_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:120:0: 'Erdos676.exists_discrete_cutoff_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:121:0: 'Erdos676.smallPairCount_sieve_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:122:0: 'Erdos676.smallAverage_second_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:123:0: 'Erdos676.eventually_power_error_absorbed_by_survival_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:124:0: 'Erdos676.smallAverage_second_moment_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:125:0: 'Erdos676.pairSurvivalProduct_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:126:0: 'Erdos676.localSingularExcess_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:127:0: 'Erdos676.crt_pair_average_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:128:0: 'Erdos676.singular_mixed_average_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:129:0: 'Erdos676.singular_product_average_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:130:0: 'Erdos676.singular_tail_increment_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:131:0: 'Erdos676.second_moment_bound_of_singular_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:132:0: 'Erdos676.logarithmic_primeSquarePeriod_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:133:0: 'Erdos676.shifted_reciprocal_square_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:134:0: 'Erdos676.pairMean_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:135:0: 'Erdos676.singularProductOn_excess_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:136:0: 'Erdos676.singular_range_mean_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:137:0: 'Erdos676.singular_range_mean_bound_coarse' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:138:0: 'Erdos676.singular_three_ranges_mean_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:139:0: 'Erdos676.singular_cutoff_mean_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:140:0: 'Erdos676.survival_ratio_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:141:0: 'Erdos676.exists_survival_ratio_log_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:142:0: 'Erdos676.singularMajorant_power_band_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:143:0: 'Erdos676.singularCoreError_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:144:0: 'Erdos676.singular_core_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:145:0: 'Erdos676.singular_core_average_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:146:0: 'Erdos676.log_powerFloor_ratio_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:147:0: 'Erdos676.floor_survival_ratio_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:148:0: 'Erdos676.growing_singular_average' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:149:0: 'Erdos676.original_singular_average' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:150:0: 'Erdos676.original_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:151:0: 'Erdos676.original_second_moment_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:152:0: 'Erdos676.residueFourier_inversion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:153:0: 'Erdos676.smallResidues_fourier_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:154:0: 'Erdos676.boxSmooth_character' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:155:0: 'Erdos676.norm_boxSmooth_character_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:156:0: 'Erdos676.stdAddChar_sub_one_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:157:0: 'Erdos676.prime_frequency_separation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:158:0: 'Erdos676.complex_gram_row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:159:0: 'Erdos676.smoothed_fourier_tail_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:160:0: 'Erdos676.retained_prime_fourier_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:161:0: 'Erdos676.sampling_gram_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:162:0: 'Erdos676.pair_character_sum_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:163:0: 'Erdos676.integer_square_kernel_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:164:0: 'Erdos676.separated_square_kernel_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:165:0: 'Erdos676.real_pair_kernel_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:166:0: 'Erdos676.separated_pair_sampling_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:167:0: 'Erdos676.separated_translated_sampling_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:168:0: 'Erdos676.prime_frequency_sampling_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:169:0: 'Erdos676.retained_prime_band_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:170:0: 'Erdos676.smoothed_indicator_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:171:0: 'Erdos676.smoothed_prime_band_energy_size' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:172:0: 'Erdos676.fourier_error_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:173:0: 'Erdos676.growing_prime_band_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:174:0: 'Erdos676.boxSmooth_path_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:175:0: 'Erdos676.realBoxSmooth_le_of_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:176:0: 'Erdos676.boundaryResidues_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:177:0: 'Erdos676.outside_boundary_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:178:0: 'Erdos676.family_boundary_interval_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:179:0: 'Erdos676.smoothing_sandwich' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:180:0: 'Erdos676.avoidance_smoothing_sandwich' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:181:0: 'Erdos676.sum_deviation_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:182:0: 'Erdos676.primeBandCount_energy_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:183:0: 'Erdos676.avoidance_card_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:184:0: 'Erdos676.avoidance_boundary_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:185:0: 'Erdos676.avoidance_correlation_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:186:0: 'Erdos676.exists_prime_band_reciprocal_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:187:0: 'Erdos676.boundary_error_power_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:188:0: 'Erdos676.high_prime_averaging' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:189:0: 'Erdos676.finite_affine_iteration_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:190:0: 'Erdos676.initial_avoidance_card_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:191:0: 'Erdos676.prime_endpoint_sum_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:192:0: 'Erdos676.initial_large_prime_avoidance' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:193:0: 'Erdos676.exists_dyadic_retention_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:194:0: 'Erdos676.prime_avoidance_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:195:0: 'Erdos676.prime_set_high_averaging' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:196:0: 'Erdos676.highPrimeBlock_log_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:197:0: 'Erdos676.exists_small_highPrimeGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:198:0: 'Erdos676.selectedHighPrimes_avoidance' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:199:0: 'Erdos676.omittedHighPrimes_mass_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:200:0: 'Erdos676.allHighPrimes_avoidance' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:201:0: 'Erdos676.stable_high_avoidance' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:202:0: 'Erdos676.stableNaturalCenters_large_avoidance' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:203:0: 'Erdos676.stable_natural_centers' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:204:0: 'Erdos676.final_parameter_choice' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:205:0: 'Erdos676.eventual_exception_survival_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:206:0: 'Erdos676.full_quantitative_disproof' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:207:0: 'Erdos676.full_disproof' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:208:0: 'Erdos676.full_unbounded_exceptions' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:209:0: 'Erdos676.erdos676_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Erdos676/Audit.lean:210:0: 'Erdos676.erdos676_infinite_exceptions' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3951/3952] Replayed SubmissionAudit
+info: audit/SubmissionAudit.lean:28:0: Erdos676.erdos676_negative : ¬∀ᶠ (n : ℕ) in atTop, ∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ b < p ∧ n = a * p ^ 2 + b
+info: audit/SubmissionAudit.lean:29:0: Erdos676.erdos676_infinite_exceptions : {n | ¬∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ b < p ∧ n = a * p ^ 2 + b}.Infinite
+info: audit/SubmissionAudit.lean:30:0: Erdos676.full_quantitative_disproof : Erdos676.QuantitativeDisproof
+info: audit/SubmissionAudit.lean:31:0: JSP000549.original_question_negative : ¬JSP000549.OriginalQuestion
+info: audit/SubmissionAudit.lean:32:0: JSP000549.arbitrarily_large_exceptions : ∀ (N : ℕ),
+  ∃ n, N ≤ n ∧ ¬∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ b < p ∧ n = a * p ^ 2 + b
+info: audit/SubmissionAudit.lean:33:0: def JSP000549.OriginalQuestion : Prop :=
+∀ᶠ (n : ℕ) in atTop, ∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ 0 ≤ b ∧ b < p ∧ n = a * p ^ 2 + b
+info: audit/SubmissionAudit.lean:34:0: def Erdos676.Representable : ℕ → Prop :=
+fun n => ∃ a p b, Nat.Prime p ∧ 1 ≤ a ∧ b < p ∧ n = a * p ^ 2 + b
+info: audit/SubmissionAudit.lean:35:0: def Erdos676.EventualRepresentation : Prop :=
+∀ᶠ (n : ℕ) in atTop, Erdos676.Representable n
+info: audit/SubmissionAudit.lean:36:0: def Erdos676.QuantitativeDisproof : Prop :=
+∃ c, 0 < c ∧ ∀ᶠ (X : ℕ) in atTop, c * ↑X / Real.log ↑X ≤ ↑(Erdos676.dyadicExceptions X).card
+info: audit/SubmissionAudit.lean:37:0: 'Erdos676.erdos676_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: audit/SubmissionAudit.lean:38:0: 'Erdos676.erdos676_infinite_exceptions' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: audit/SubmissionAudit.lean:39:0: 'Erdos676.full_quantitative_disproof' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: audit/SubmissionAudit.lean:40:0: 'JSP000549.question_equivalent' depends on axioms: [propext, Quot.sound]
+info: audit/SubmissionAudit.lean:41:0: 'JSP000549.original_question_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: audit/SubmissionAudit.lean:42:0: 'JSP000549.arbitrarily_large_exceptions' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3952 jobs).
